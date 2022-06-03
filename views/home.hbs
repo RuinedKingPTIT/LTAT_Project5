@@ -44,10 +44,11 @@
 <div class="select-box">
   <div class="btnControl">
     <button type="button" class="btn btn-outline-primary btn-start">Start</button>
+    <button type="button" class="btn btn-outline-primary btn-show-modal" style="display: none;">Show</button>
     {{!-- <button type="button" class="btn btn-outline-danger btn-stop">Stop</button> --}}
 
 
-{{!-- data-bs-toggle="modal" data-bs-target="#staticBackdrop" --}}
+    {{!-- data-bs-toggle="modal" data-bs-target="#staticBackdrop" --}}
   </div>
   <div class="options-container">
     <div class="option">
@@ -112,7 +113,8 @@
 </button> --}}
 
 <!-- Modal1 -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -121,40 +123,40 @@
       </div>
       <div class="modal-body">
         <div class="main-section">
-           
-            <div class="info-wrapper">
-                <p class="city-name">Thành phố Hà Nội</p>
-                <p class="weather-state">--</p>
-                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="weather-icon">
-                <p class="temperature">--</p>
-            </div>
+
+          <div class="info-wrapper">
+            <p class="city-name">Thành phố Hà Nội</p>
+            <p class="weather-state">--</p>
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="weather-icon">
+            <p class="temperature">--</p>
+          </div>
         </div>
         <div class="additional-section">
-            <div class="row">
-                <div class="item">
-                    <div class="label">MT Mọc</div>
-                    <div class="value sunrise">--</div>
-                </div>
-                <div class="item">
-                    <div class="label">MT Lặn</div>
-                    <div class="value sunset">--</div>
-                </div>
+          <div class="row">
+            <div class="item">
+              <div class="label">MT Mọc</div>
+              <div class="value sunrise">--</div>
             </div>
-            <div class="row">
-                <div class="item">
-                    <div class="label">Độ ẩm</div>
-                    <div class="value"><span class="humidity">--</span>%</div>
-                </div>
-                <div class="item">
-                    <div class="label">Gió</div>
-                    <div class="value"><span class="wind-speed">--</span> km/h</div>
-                </div>
+            <div class="item">
+              <div class="label">MT Lặn</div>
+              <div class="value sunset">--</div>
             </div>
+          </div>
+          <div class="row">
+            <div class="item">
+              <div class="label">Độ ẩm</div>
+              <div class="value"><span class="humidity">--</span>%</div>
+            </div>
+            <div class="item">
+              <div class="label">Gió</div>
+              <div class="value"><span class="wind-speed">--</span> km/h</div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        
+
       </div>
     </div>
   </div>
@@ -183,7 +185,8 @@
 
 
 <!-- Modal3 -->
-<div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -192,40 +195,40 @@
       </div>
       <div class="modal-body">
         <div class="main-section">
-           
-            <div class="info-wrapper">
-                <p class="city-name">Thành phố Hà Nội</p>
-                <p class="weather-state">--</p>
-                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="weather-icon">
-                <p class="temperature">--</p>
-            </div>
+
+          <div class="info-wrapper">
+            <p class="city-name">Thành phố Hà Nội</p>
+            <p class="weather-state">--</p>
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="weather-icon">
+            <p class="temperature">--</p>
+          </div>
         </div>
         <div class="additional-section">
-            <div class="row">
-                <div class="item">
-                    <div class="label">MT Mọc</div>
-                    <div class="value sunrise">--</div>
-                </div>
-                <div class="item">
-                    <div class="label">MT Lặn</div>
-                    <div class="value sunset">--</div>
-                </div>
+          <div class="row">
+            <div class="item">
+              <div class="label">MT Mọc</div>
+              <div class="value sunrise">--</div>
             </div>
-            <div class="row">
-                <div class="item">
-                    <div class="label">Độ ẩm</div>
-                    <div class="value"><span class="humidity">--</span>%</div>
-                </div>
-                <div class="item">
-                    <div class="label">Gió</div>
-                    <div class="value"><span class="wind-speed">--</span> km/h</div>
-                </div>
+            <div class="item">
+              <div class="label">MT Lặn</div>
+              <div class="value sunset">--</div>
             </div>
+          </div>
+          <div class="row">
+            <div class="item">
+              <div class="label">Độ ẩm</div>
+              <div class="value"><span class="humidity">--</span>%</div>
+            </div>
+            <div class="item">
+              <div class="label">Gió</div>
+              <div class="value"><span class="wind-speed">--</span> km/h</div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        
+
       </div>
     </div>
   </div>
