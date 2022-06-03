@@ -1,0 +1,45 @@
+.footer {
+  height: 430px;
+  background-color: #1b1b1b;
+}
+.footer__content {
+  display: flex;
+  max-width: 80%;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer__content__list {
+  margin-top: 43px;
+}
+.list__item__title {
+  color: #897979;
+  font-weight: bold;
+}
+.list__items__content {
+  color: white;
+  line-height: 45px;
+}
+.qrcode {
+  width: 72px;
+  height: 65.65px;
+}
+.contact__github img {
+  width: 44px;
+  height: 44px;
+}
+.footer__contactName {
+  color: #897979;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.footer__contact {
+  padding-top: 15px;
+  padding-left: 191px;
+}
+.footer__contact__link {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 20%;
+}

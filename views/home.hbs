@@ -1,0 +1,255 @@
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+      aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/1.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+
+        <h5>Project #05</h5>
+        <p>Voice-based HCI for VR/AR app</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/2.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+
+        <h5>nhóm thực hiện</h5>
+        <p>SNDPROJSP2205</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/3.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Giảng viên hướng dẫn</h5>
+        <p>Phạm Văn Sự</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+<div class="select-box">
+  <div class="btnControl">
+    <button type="button" class="btn btn-outline-primary btn-start">Start</button>
+    {{!-- <button type="button" class="btn btn-outline-danger btn-stop">Stop</button> --}}
+
+
+{{!-- data-bs-toggle="modal" data-bs-target="#staticBackdrop" --}}
+  </div>
+  <div class="options-container">
+    <div class="option">
+      <input type="radio" class="radio" id="automobiles" name="category" />
+      <img src="icons/weather.png" alt="weather" style="width: 25px; vertical-align: text-bottom;">
+      <label for="automobiles"> What is the weather like today?</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" class="radio" id="film" name="category" />
+      <img src="icons/calendar.png" alt="day" style="width: 25px; vertical-align: text-bottom;">
+      <label for="film">What day is it today?</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" class="radio" id="science" name="category" />
+      <img src="icons/clock.png" alt="time" style="width: 25px; vertical-align: text-bottom;">
+      <label for="science">What is the time?</label>
+    </div>
+    <div class="option">
+      <input type="radio" class="radio" id="science" name="category" />
+      <img src="icons/right-arrow.png" alt="time" style="width: 25px; vertical-align: text-bottom;">
+      <label for="science">Take me to Youtube</label>
+    </div>
+    <div class="option">
+      <input type="radio" class="radio" id="science" name="category" />
+      <img src="icons/right-arrow.png" alt="time" style="width: 25px; vertical-align: text-bottom;">
+      <label for="science">Take me to Chrome</label>
+    </div>
+    <div class="option">
+      <input type="radio" class="radio" id="science" name="category" />
+      <img src="icons/right-arrow.png" alt="time" style="width: 25px; vertical-align: text-bottom;">
+      <label for="science">Take me to Facebook</label>
+    </div>
+    <div class="option">
+      <input type="radio" class="radio" id="science" name="category" />
+      <img src="icons/right-arrow.png" alt="spotify" style="width: 25px; vertical-align: text-bottom;">
+      <label for="science">Take me to Spotify</label>
+    </div>
+    <div class="option">
+      <input type="radio" class="radio" id="science" name="category" />
+      <img src="icons/cleaning.png" alt="time" style="width: 25px; vertical-align: text-bottom;">
+      <label for="science">Clear command</label>
+    </div>
+    <div class="option">
+      <input type="radio" class="radio" id="science" name="category" />
+      <img src="icons/sticky-notes.png" alt="note" style="width: 25px; vertical-align: text-bottom;">
+      <label for="science">Note somethings</label>
+    </div>
+
+
+  </div>
+
+  <div class="selected">
+    Sample questions:
+  </div>
+</div>
+<textarea id="result-question" class="output" cols="38" rows="5"></textarea>
+<!-- Button trigger modal -->
+{{!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Launch static backdrop modal
+</button> --}}
+
+<!-- Modal1 -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Weather</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="main-section">
+           
+            <div class="info-wrapper">
+                <p class="city-name">Thành phố Hà Nội</p>
+                <p class="weather-state">--</p>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="weather-icon">
+                <p class="temperature">--</p>
+            </div>
+        </div>
+        <div class="additional-section">
+            <div class="row">
+                <div class="item">
+                    <div class="label">MT Mọc</div>
+                    <div class="value sunrise">--</div>
+                </div>
+                <div class="item">
+                    <div class="label">MT Lặn</div>
+                    <div class="value sunset">--</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="item">
+                    <div class="label">Độ ẩm</div>
+                    <div class="value"><span class="humidity">--</span>%</div>
+                </div>
+                <div class="item">
+                    <div class="label">Gió</div>
+                    <div class="value"><span class="wind-speed">--</span> km/h</div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal2 -->
+<!-- Button trigger modal -->
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Day</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h1>hello nguyen van sang</h1>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        {{!-- <button type="button" class="btn btn-primary">Save changes</button> --}}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal3 -->
+<div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Weather</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="main-section">
+           
+            <div class="info-wrapper">
+                <p class="city-name">Thành phố Hà Nội</p>
+                <p class="weather-state">--</p>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="weather-icon">
+                <p class="temperature">--</p>
+            </div>
+        </div>
+        <div class="additional-section">
+            <div class="row">
+                <div class="item">
+                    <div class="label">MT Mọc</div>
+                    <div class="value sunrise">--</div>
+                </div>
+                <div class="item">
+                    <div class="label">MT Lặn</div>
+                    <div class="value sunset">--</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="item">
+                    <div class="label">Độ ẩm</div>
+                    <div class="value"><span class="humidity">--</span>%</div>
+                </div>
+                <div class="item">
+                    <div class="label">Gió</div>
+                    <div class="value"><span class="wind-speed">--</span> km/h</div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<script>
+  const selected = document.querySelector(".selected");
+  const optionsContainer = document.querySelector(".options-container");
+
+  const optionsList = document.querySelectorAll(".option");
+
+  selected.addEventListener("click", () => {
+    optionsContainer.classList.toggle("active");
+  });
+
+  optionsList.forEach(o => {
+    o.addEventListener("click", () => {
+      selected.innerHTML = o.querySelector("label").innerHTML;
+      optionsContainer.classList.remove("active");
+    });
+  });
+
+</script>
+<script src="js/SpeechRecognitionApi.js"></script>
