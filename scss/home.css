@@ -6,14 +6,16 @@
   z-index: 0;
 }
 
-
-
 .select-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 400px;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 60px;
-  // margin-left: 60px;
   margin-bottom: 40px;
 }
 
@@ -23,11 +25,13 @@
   max-height: 0;
   width: 100%;
   opacity: 0;
+  -webkit-transition: all 0.4s;
   transition: all 0.4s;
   border-radius: 8px;
   overflow: hidden;
-
-  order: 1;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
 .selected {
@@ -36,8 +40,9 @@
   margin-bottom: 8px;
   color: #f5f6fa;
   position: relative;
-
-  order: 0;
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
 }
 
 .selected::after {
@@ -45,13 +50,12 @@
   background: url("icons/arrow-down.svg");
   background-size: contain;
   background-repeat: no-repeat;
-
   position: absolute;
   height: 100%;
   width: 32px;
   right: 10px;
   top: 5px;
-
+  -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 
@@ -61,8 +65,9 @@
   overflow-y: scroll;
 }
 
-.select-box .options-container.active+.selected::after {
-  transform: rotateX(180deg);
+.select-box .options-container.active + .selected::after {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
   top: -6px;
 }
 
@@ -98,13 +103,11 @@
 .carousel-caption {
   position: absolute;
   top: 250px;
-  // padding-top: 550px;
 }
 
 .carousel-caption h5 {
   text-transform: uppercase;
   font-weight: bold;
-  // padding-top: 550px;
 }
 
 .btnControl {
@@ -112,16 +115,23 @@
 }
 
 .output {
-  // margin-left: 60px;
   margin-bottom: 20px;
 }
 
-
 .info-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 30vh;
   padding: 80px 50px;
 }
@@ -155,21 +165,35 @@
 
 .additional-section {
   border-top: 1px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 10px 20px;
   font-size: 13px;
 }
 
 .additional-section .row {
   margin-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .additional-section .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .additional-section .item .label {
@@ -178,9 +202,15 @@
 
 .modal__body {
   min-height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #051320;
 }
 
@@ -194,21 +224,33 @@
   position: absolute;
   width: 80px;
   height: 80px;
-  box-shadow: 206px 208px #ffc300, -35px 70px #FF5733;
+  -webkit-box-shadow: 206px 208px #ffc300, -35px 70px #FF5733;
+          box-shadow: 206px 208px #ffc300, -35px 70px #FF5733;
   border-radius: 50%;
 }
 
 .calendar .calendar-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
   border-bottom: 6px solid #4285F4;
   border-right: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
-  box-shadow: 0 5px 25px rgb(1/15%, 1/15%, 1/15%);
+  -webkit-box-shadow: 0 5px 25px black;
+          box-shadow: 0 5px 25px black;
 }
 
 .calendar .calendar-body .month-name {
@@ -779,32 +821,17 @@ footer #tzine-actions iframe {
   height: 21px;
   width: 95px;
   position: relative;
-  // float: left;
   margin-top: 11px;
 }
-
-/*# sourceMappingURL=style.css.map */
-
-$primary-color: #b11adc;
-$animation-duration: 0.4s;
-
-@mixin label-inactive() {
-  font-size: 1.2rem;
-  transform: translateY(0);
-}
-
-@mixin label-active() {
-  font-size: 0.75rem;
-  transform: translateY(-14px);
-}
-
 .form-field {
   display: block;
   margin-bottom: 16px;
 }
 
 .form-field__label {
-  @include label-active();
+  font-size: 0.75rem;
+  -webkit-transform: translateY(-14px);
+          transform: translateY(-14px);
   display: block;
   font-weight: normal;
   left: 0;
@@ -812,7 +839,8 @@ $animation-duration: 0.4s;
   padding: 18px 12px 0;
   position: absolute;
   top: 0;
-  transition: all $animation-duration;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
   width: 100%;
 }
 
@@ -825,7 +853,7 @@ $animation-duration: 0.4s;
 }
 
 .form-field__bar {
-  border-bottom: 2px solid $primary-color;
+  border-bottom: 2px solid #b11adc;
   bottom: 0;
   content: "";
   display: block;
@@ -833,14 +861,18 @@ $animation-duration: 0.4s;
   margin: 0 auto;
   position: absolute;
   right: 0;
-  transform: scaleX(0);
-  transition: all $animation-duration;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
   width: 1%;
 }
 
 .form-field__input,
 .form-field__textarea {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background: transparent;
   border: 0;
   border-bottom: 1px solid #999;
@@ -851,32 +883,34 @@ $animation-duration: 0.4s;
   outline: 0;
   padding: 0 12px 10px 12px;
   width: 100%;
+}
 
-  // IE 10-11
-  &:-ms-input-placeholder {
-    ~.form-field__label {
-      @include label-inactive();
-    }
-  }
+.form-field__input:-ms-input-placeholder ~ .form-field__label,
+.form-field__textarea:-ms-input-placeholder ~ .form-field__label {
+  font-size: 1.2rem;
+  transform: translateY(0);
+}
 
-  // All other browsers except Edge
-  &:placeholder-shown {
-    ~.form-field__label {
-      @include label-inactive();
-    }
-  }
+.form-field__input:placeholder-shown ~ .form-field__label,
+.form-field__textarea:placeholder-shown ~ .form-field__label {
+  font-size: 1.2rem;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
 
-  &:focus {
-    ~.form-field__label {
-      color: $primary-color;
-      @include label-active();
-    }
+.form-field__input:focus ~ .form-field__label,
+.form-field__textarea:focus ~ .form-field__label {
+  color: #b11adc;
+  font-size: 0.75rem;
+  -webkit-transform: translateY(-14px);
+          transform: translateY(-14px);
+}
 
-    ~.form-field__bar {
-      border-bottom: 2px solid $primary-color;
-      transform: scaleX(150);
-    }
-  }
+.form-field__input:focus ~ .form-field__bar,
+.form-field__textarea:focus ~ .form-field__bar {
+  border-bottom: 2px solid #b11adc;
+  -webkit-transform: scaleX(150);
+          transform: scaleX(150);
 }
 
 .form-field__textarea {
@@ -889,3 +923,4 @@ $animation-duration: 0.4s;
   width: 5%;
   line-height: 1.5;
 }
+/*# sourceMappingURL=home.css.map */
