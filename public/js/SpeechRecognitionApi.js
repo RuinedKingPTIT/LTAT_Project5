@@ -111,6 +111,15 @@ function handleEvent(speechResult) {
 
       btnShowModal.click();
     });
+  } else if(speechResult.includes("what day is it today")){
+    btnShowModal.setAttribute('data-bs-toggle', 'modal');
+    btnShowModal.setAttribute('data-bs-target', '#staticBackdrop2');
+    btnShowModal.click();
+  } 
+  else if(speechResult.includes("what is the time")){
+    btnShowModal.setAttribute('data-bs-toggle', 'modal');
+    btnShowModal.setAttribute('data-bs-target', '#staticBackdrop3');
+    btnShowModal.click();
   }
 }
 
@@ -132,25 +141,11 @@ function clickHandler(event) {
 
 
   recognition.onresult = function (event) {
-
-
     const speechResult = event.results[0][0].transcript.toLowerCase();
-    diagnosticPara.textContent = 'Speech received: ' + speechResult + '.';
+    diagnosticPara.textContent = speechResult + '.';
     handleEvent(speechResult)
-    // if(speechResult === phrase) {
-    //   resultPara.textContent = 'I heard the correct phrase!';
-    //   resultPara.style.background = 'lime';
-    // } else {
-    //   resultPara.textContent = 'That didn\'t sound right.';
-    //   resultPara.style.background = 'red';
-    // }
-
-    // console.log('Confidence: ' + event.results[0][0].confidence);
   }
 
-  // const option = document.getElementById("result-question").value;
-  // const speechResult = event.results[0][0].transcript.toLowerCase();
-  // console.log('resutl: ' + speechResult);
 
 
 
